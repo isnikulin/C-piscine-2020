@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_map.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aarcelia <aarcelia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/01 21:49:47 by aarcelia          #+#    #+#             */
+/*   Updated: 2020/09/02 09:40:54 by aarcelia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+
+int	*ft_map(int *tab, int length, int (*f)(int))
+{
+	int		*ret;
+	int		i;
+
+	i = 0;
+	ret = (int *)malloc(sizeof(int) * length);
+	while (*tab && length > 0)
+	{
+		ret[i] = f(*tab);
+		length--;
+		tab++;
+		i++;
+	}
+	return (ret);
+}
