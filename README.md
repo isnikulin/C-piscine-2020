@@ -1,2 +1,2 @@
-# C-piscine-2020
+# C piscine, august 2020
 Kazan august 2020
